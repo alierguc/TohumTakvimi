@@ -37,7 +37,7 @@ Gradle  | gradle-6.2
 
 
 H2 Ionic and Cordova System Requirements
-###Characters
+#asas
 Android System Requirements  | Version 
 ------------- | -------------
 Ionic CLI | 6.1.0
