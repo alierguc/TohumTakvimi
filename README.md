@@ -18,7 +18,7 @@ Enter the command from the file content.
 
 H2 İonic ve Cordova Sistem Gereksinimleri
 
-First Header  | Second Header
+Android Sistem Gereksinimi  | Versiyon 
 ------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | Content Cell 
+Java JDK  | 1.8.0
+Android SDK  | TRUE
