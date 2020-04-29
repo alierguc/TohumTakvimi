@@ -59,4 +59,4 @@ Java JDK  | 1.8.0
 Android Target (Supporting API Level's)  | installed android-29,android-28,android-27,android-26,android-25,android-24,android-23,android-22,android-21,android-20,android-19,android-18,android-17,android-16,android-15,android-14
 Gradle  | gradle-6.2
 
-![](https://imgur.com/XfIgEwF)
+![](https://imgur.com/Mc4vV1j)
