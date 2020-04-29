@@ -16,7 +16,7 @@ Enter the command from the file content.
 
 ------------------------------------------------------------------------------------------
 
-H2 İonic ve Cordova Sistem Gereksinimleri
+## İonic ve Cordova Sistem Gereksinimleri
 
 Android Sistem Gereksinimi  | Versiyon 
 ------------- | -------------
@@ -36,8 +36,8 @@ Gradle  | gradle-6.2
 ------------------------------------------------------------------------------------------
 
 
-H2 Ionic and Cordova System Requirements
-#asas
+## Ionic and Cordova System Requirements
+
 Android System Requirements  | Version 
 ------------- | -------------
 Ionic CLI | 6.1.0
