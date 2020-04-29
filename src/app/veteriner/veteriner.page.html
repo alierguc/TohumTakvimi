@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Veteriner Hekim Bilgileri
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div style="margin-top: 20px; margin-bottom: 10px;" class="animCard">
+    <ion-button shape="round" fill="outline" expand="full" (click)="veterinerEkle()"> <ion-icon slot="start" name="add"></ion-icon>Veteriner Ekle</ion-button>
+  </div>
+  <div style="margin-top: 10px;" class="animCard">
+    <ion-button shape="round" fill="outline" expand="full" (click)="VeriGetir()"> <ion-icon slot="start" name="star"></ion-icon>Veteriner Göster</ion-button>
+  </div>
+  <div class="container" class="animCard" *ngFor="let user of dataVar">
+    <div class="row">
+        <div class="col-md-4">
+          <div class="card card-3">
+            <p style="color:white;">Hekim Adı Soyadı : &nbsp;<span>{{user.HEKIM_ADI_SOYADI}}</span></p>
+            <p style="color:white;">Toplam Tutar :&nbsp;<span>{{user.TOPLAM_TUTAR}}</span></p>
+            <p style="color:white;">Ödenen Tutar :&nbsp;<span>{{user.YAPILAN_ODEME}}</span></p>
+            <p style="color:white;">Kalan Tutar :&nbsp;<span>{{user.KALAN_TUTAR}}</span></p>
+            <p style="color:white;">Ödeme Tarihi :&nbsp;<span>{{user.ODEME_TARIHI}}</span></p>
+            <p style="color:white;">Not : &nbsp;<span>{{user.NOT_ICERIK}}</span></p>
+            <div style="margin-top: 30px;">
+              <ion-button color="secondary" shape="round" fill="outline" expand="full" (click)="veriSil(user.ID)"> <ion-icon slot="start" name="trash"></ion-icon>Sil</ion-button>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      </div>
+   
+</ion-content>

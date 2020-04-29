@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Veteriner Hekim Bilgileri</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="content">
+    <ion-item>
+      <ion-label>Ödeme Tarihi</ion-label>
+      <ion-datetime name="odeme_tarihi" [(ngModel)]="bodyData.odeme_tarihi" cancelText="Kapat" doneText="Ayarla" value="2019-04-15" min="2019-02" max="2030"
+      monthNames="Ocak, Şubat, Mart, Nisan, Mayıs, Ağustos, Eylül, Ekim, Kasım, Aralık"
+        displayFormat="D MMM YYYY"
+        monthShortNames="Ock, Şbt, Mrt, Nsn, Mys, Hzrn, Tmmz, Agts, Eyl, Ekm, Ksm, Arlk"   
+        ></ion-datetime>
+      </ion-item>
+    <ion-item>
+      <ion-label position="floating">Toplam Tutar</ion-label>
+      <ion-input name="toplam_tutar" [(ngModel)]="bodyData.toplam_tutar"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Yapılan Ödeme</ion-label>
+        <ion-input name="yapilan_odeme" [(ngModel)]="bodyData.yapilan_odeme"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Kalan Tutar</ion-label>
+          <ion-input name="kalan_tutar" [(ngModel)]="bodyData.kalan_tutar"></ion-input>
+          </ion-item>
+        <ion-item>
+          <ion-label position="floating">Hekim Adı Soyadı</ion-label>
+          <ion-input name="hekim_adi_soyadi" [(ngModel)]="bodyData.hekim_adi_soyadi"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Notunuz</ion-label>
+            <ion-textarea name="not" [(ngModel)]="bodyData.not" rows="6" cols="20"></ion-textarea>
+          </ion-item>
+          <div style="margin-top: 20px; margin-bottom: 20px;">
+            <ion-button shape="round" fill="outline" expand="full" (click)="bilgiCek()"> <ion-icon slot="start" name="save"></ion-icon>Kaydet</ion-button>
+          </div>
+      </div>
+</ion-content>

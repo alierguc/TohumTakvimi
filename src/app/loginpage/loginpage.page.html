@@ -1,0 +1,31 @@
+
+<ion-content>
+<div class="wrapper">
+  
+  <!--  Header  -->
+  <header class="section header">
+    <div class="trapezoid"></div>
+    
+    <div class="header__text">
+      <div class="fill"></div>
+    </div>
+  </header>
+
+    
+    <!--  Sign In  -->
+    <section class="section sign-in">
+      <form action="">
+        <ion-item>
+          <ion-label color="primary" position="floating">İşletme Numaranız</ion-label>
+          <ion-input name="isletme_no" [(ngModel)]="veri.isletme_no"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label color="primary" position="floating">Şifreniz</ion-label>
+          <ion-input name="sifre" type="password" [(ngModel)]="veri.sifre"></ion-input>
+        </ion-item>
+        <ion-button shape="round" color="primary" expand="full" fill="outline" (click)="girisKontrol()">Giriş Yap</ion-button>
+  
+      </form>
+    </section>
+</div>
+</ion-content>

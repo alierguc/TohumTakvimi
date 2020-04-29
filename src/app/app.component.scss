@@ -1,0 +1,116 @@
+.sidemenu-top {
+    padding-left: 15px;
+    overflow: hidden;
+    height: 125px;
+    background-color: rgb(5,99,66);
+    width: 90%;
+    background-size: cover;
+    background-position: center;
+    background-image: url("src/graphics/logo.png");
+  }
+  .sidemenu-top-close
+  {
+    padding-top: 10px;
+    background-color:rgb(5,99,66);
+    padding-left: 10%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .animated {
+    background-image: url(/css/images/logo.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    -webkit-animation-duration: 1.4s;
+    animation-duration:  1.4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+ }
+ 
+ @-webkit-keyframes fadeInLeft {
+    0% {
+       opacity: 0;
+       -webkit-transform: translateX(-20px);
+    }
+    100% {
+       opacity: 1;
+       -webkit-transform: translateX(0);
+    }
+ }
+ 
+ @keyframes fadeInLeft {
+    0% {
+       opacity: 0;
+       transform: translateX(-20px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateX(0);
+    }
+ }
+ 
+ .fadeInLeft {
+ -webkit-animation-name: fadeInLeft;
+ animation-name: fadeInLeft;
+ } 
+ @import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
+
+ span {
+   font-size: calc(20px + 20px);
+   line-height: calc(20px + 20px);
+ /*   text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+     0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
+   color: #fccaff; */
+   text-shadow: 0 0 5px #bd1878, 0 0 15px #a01968, 0 0 20px #bb1576, 0 0 40px #ce077b, 0 0 60px #e9088b, 0 0 10px #bb1576, 0 0 98px #ff0000;
+    color: #69632b;
+   font-family: "Sacramento", cursive;
+   text-align: center;
+   animation: blink 12s infinite;
+   -webkit-animation: blink 12s infinite;
+ }
+ @-webkit-keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+/*     color: #fccaff;
+    text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
+      text-shadow: 0 0 5px #18bd86, 0 0 15px #12834a, 0 0 20px #0d7e49, 0 0 40px #096d36, 0 0 60px #098b3b, 0 0 10px #097429, 0 0 98px #09b31f;
+      color: #ffffff;
+  }
+}
+
+@keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+/*     color: #fccaff;
+    text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
+ text-shadow: 0 0 5px #18bd86, 0 0 15px #12834a, 0 0 20px #0d7e49, 0 0 40px #096d36, 0 0 60px #098b3b, 0 0 10px #097429, 0 0 98px #09b31f;
+    color: #ffffff;
+  }
+}

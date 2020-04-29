@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      Hayvanlar Listesi
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <ion-item>
+      <ion-label position="floating">Küpe numarasına göre ara</ion-label>
+      <ion-input name="kupe_numarasi" [(ngModel)]="bodyData.kupe_numarasi"></ion-input>
+    </ion-item>
+    <ion-button shape="round" color="base" expand="full"
+      (click)="searchData()">
+      <ion-icon slot="start" name="search"></ion-icon>Ara
+    </ion-button>
+  </div>
+
+  <div class="container" class="animCard" *ngIf="!cardKontrol">
+    <div class="row">
+      <div class="col-md-4" class="animCard" *ngFor="let dataUser of data">
+        <div class="card card-1">
+          <p style="color:white; font-size: small;">Buzağı : <span>&nbsp;&nbsp;{{dataUser.BUZAGI}}</span>&nbsp;</p>
+          <p style="color:white; font-size: small;">Küpe Numarası :
+            <span>&nbsp;&nbsp;{{dataUser.KUPE_NUMARASI}}</span>&nbsp;</p>
+          <p style="color:white; font-size: small;">Hayvan Adı : <span>&nbsp;&nbsp;{{dataUser.HAYVAN_ADI}}</span>&nbsp;
+          </p>
+          <p style="color:white; font-size: small;">Boğa Küpe : <span>&nbsp;&nbsp;{{dataUser.BOGA_KUPE}}</span>&nbsp;
+          </p>
+          <p style="color:white; font-size: small;">Anne Küpe No :<span>&nbsp;{{dataUser.ANNE_KUPE}}</span></p>
+          <p style="color:white; font-size: small;">Doğum Tarihi :
+            <span>&nbsp;&nbsp;{{dataUser.DOGUM_TARIHI}}</span>&nbsp;</p>
+          <p style="color:white; font-size: small;">Geliş Tarihi :
+            <span>&nbsp;&nbsp;{{dataUser.GELIS_TARIHI}}</span>&nbsp;</p>
+          <p style="color:white; font-size: small;">Irk : <span>&nbsp;&nbsp;{{dataUser.IRK_ADI}}</span>&nbsp;</p>
+          <p style="color:white; font-size: small;">Cinsiyet : <span>&nbsp;&nbsp;{{dataUser.CINSIYET}}</span>&nbsp;</p>
+          <p style="color:white; font-size: small;">Not : <span>&nbsp;&nbsp;{{dataUser.NOT_ICERIK}}</span>&nbsp;</p>
+
+          <ion-button (click)="durumunaBak(dataUser.ID)" shape="round" color="base" expand="full">
+            <ion-icon slot="start" name="search"></ion-icon>Bilgileri Gör
+          </ion-button>
+          <div style="margin-top: 20px;">
+            <ion-button (click)="bilgiDuzenle(dataUser.KUPE_NUMARASI)" shape="round" color="base" expand="full"
+              (click)="hastalikSil(user.ID)">
+              <ion-icon slot="start" name="book-outline"></ion-icon>Bilgileri Düzenle
+            </ion-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" class="animCard" *ngIf="cardKontrol">
+    <div class="row">
+      <div class="col-md-4" class="animCard">
+        <div class="card card-1">
+          <p style="color:white; font-size: small;">Buzağı : <span>&nbsp;&nbsp;{{this.buzagi}}</span>&nbsp;</p>
+          <p style="color:white; font-size: small;">Küpe Numarası :
+            <span>&nbsp;&nbsp;{{kupe_numarasi}}</span>&nbsp;</p>
+          <p style="color:white; font-size: small;">Hayvan Adı : <span>&nbsp;&nbsp;{{hayvan_adi}}</span>&nbsp;
+          </p>
+          <p style="color:white; font-size: small;">Boğa Küpe : <span>&nbsp;&nbsp;{{boga_kupe}}</span>&nbsp;
+          </p>
+          <p style="color:white; font-size: small;">Anne Küpe No :<span>&nbsp;{{anne_kupe}}</span></p>
+          <p style="color:white; font-size: small;">Doğum Tarihi :
+            <span>&nbsp;&nbsp;{{dogum_tarihi}}</span>&nbsp;</p>
+          <p style="color:white; font-size: small;">Geliş Tarihi :
+            <span>&nbsp;&nbsp;{{gelis_tarihi}}</span>&nbsp;</p>
+          <p style="color:white; font-size: small;">Irk : <span>&nbsp;&nbsp;{{irk_adi}}</span>&nbsp;</p>
+          <p style="color:white; font-size: small;">Cinsiyet : <span>&nbsp;&nbsp;{{cinsiyet}}</span>&nbsp;</p>
+          <p style="color:white; font-size: small;">Not : <span>&nbsp;&nbsp;{{not_icerik}}</span>&nbsp;</p>
+
+          <ion-button (click)="durumunaBak(id)" shape="round" color="base" expand="full">
+            <ion-icon slot="start" name="search"></ion-icon>Bilgileri Gör
+          </ion-button>
+          <div style="margin-top: 20px;">
+            <ion-button (click)="bilgiDuzenle(kupe_numarasi)" shape="round" color="base" expand="full">
+              <ion-icon slot="start" name="book-outline"></ion-icon>Bilgileri Düzenle
+            </ion-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

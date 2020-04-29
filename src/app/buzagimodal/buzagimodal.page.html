@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+     Buzağı listesi
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="lolo" *ngIf="kontrolLoading">
+    <ion-progress-bar type="indeterminate" reversed="true"></ion-progress-bar>
+    <p>Yükleniyor lütfen bekleyiniz</p>
+  </div>
+  <ion-item>
+    <ion-label position="floating">Anne küpe numarasını giriniz</ion-label>
+    <ion-input name="kupe_numarasi" [(ngModel)]="bodyData.kupe_numarasi"></ion-input>
+  </ion-item>
+  <div style="padding-left:5%; padding-right:10px; margin-top: 20px;">
+    <ion-button shape="round" fill="outline" (click)="searchData()"> <ion-icon slot="start" name="search"></ion-icon>Ara</ion-button>
+  </div>
+
+  <div class="container" class="animCard" *ngIf="kontrolCard">
+    <div class="row">
+      <div class="col-md-4" *ngFor="let user of responseSearchData">
+        <div class="card card-1">
+          <p style="color:white; font-size: medium;">Buzağı Numarası : &nbsp;<span>{{user.BUZAGI}}</span></p>
+<p style="color:white; font-size: medium;">Küpe Numarası :&nbsp;<span>{{user.KUPE_NUMARASI}}</span></p>
+<p style="color:white; font-size: medium;">Hayvan Adı :&nbsp;<span>{{user.HAYVAN_ADI}}</span></p>
+<p style="color:white; font-size: medium;">Böğe Küpe :&nbsp;<span>{{user.BOGA_KUPE}}</span></p>
+<p style="color:white; font-size: medium;">Anne Küpe Numarası :&nbsp;<span>{{user.ANNE_KUPE}}</span></p>
+<p style="color:white; font-size: medium;">Doğum Tarihi : &nbsp;<span>{{user.DOGUM_TARIHI}}</span></p>
+<p style="color:white; font-size: medium;">İşletmeye Geliş Tarihi : &nbsp;<span>{{user.GELIS_TARIHI}}</span></p>
+<p style="color:white; font-size: medium;">Irk Adı : &nbsp;<span>{{user.IRK_ADI}}</span></p>
+<p style="color:white; font-size: medium;">Cinsiyet : &nbsp;<span>{{user.CINSIYET}}</span></p>
+<p style="color:white; font-size: medium;">Not : &nbsp;<span>{{user.NOT_ICERIK}}</span></p>
+<div style="padding-left:5%; padding-right:10px; margin-top: 40px; margin-bottom: 40px;" *ngIf="kontrolCard">
+  <ion-button shape="round" fill="outline" color="secondary" expand="full" (click)="deleteData(user.KUPE_NUMARASI)"> <ion-icon slot="start" name="trash"></ion-icon>Sil</ion-button>
+</div>
+       </div>
+        </div>
+    </div>
+  </div>
+  
+</ion-content>
+

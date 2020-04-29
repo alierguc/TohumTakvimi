@@ -1,0 +1,92 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Hayvan Ara
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="lolo" *ngIf="kontrolProgress">
+    <ion-progress-bar type="indeterminate" reversed="true"></ion-progress-bar>
+    <p>Yükleniyor lütfen bekleyiniz</p>
+  </div>
+  <ion-item>
+    <ion-label position="floating">Aranacak Küpe Numarasını Giriniz</ion-label>
+    <ion-input name="kupe_numarasi" [(ngModel)]="bodyData.kupe_numarasi"></ion-input>
+  </ion-item>
+  <div style="padding-left:5%; padding-right:10px; margin-top: 20px;">
+    <ion-button shape="round" fill="outline" (click)="searchData()"> <ion-icon slot="start" name="search"></ion-icon>Ara</ion-button>
+  </div>
+
+  <div class="container" class="animCard" *ngIf="kontrolCard">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card card-1">
+          <h4 style="color:white;">Küpe Numarası</h4>
+          <p style="color:white;">{{kupe_numarasi}}</p>
+        </div>
+      </div>
+      <div class="col-md-4" class="animCard">
+        <div class="card card-3">
+          <h4 style="color:white;">BUZAGI</h4>
+          <p style="color:white;">{{buzagi}}</p>
+        </div>
+      </div>
+      <div class="col-md-4" class="animCard">
+        <div class="card card-3">
+          <h4 style="color:white;">Hayvan Adı</h4>
+          <p style="color:white;">{{hayvan_adi}}</p>
+        </div>
+      </div>
+      <div class="col-md-4" class="animCard">
+        <div class="card card-2">
+          <h4 style="color:white;">Boğa Küpe</h4>
+          <p style="color:white;">{{kullanici_not}}</p>
+        </div>
+      </div>
+      <div class="col-md-4" class="animCard">
+        <div class="card card-2">
+          <h4 style="color:white;">Anne Küpe</h4>
+          <p style="color:white;">{{anne_kupe}}</p>
+        </div>
+      </div>
+      <div class="col-md-4" class="animCard">
+        <div class="card card-2">
+          <h4 style="color:white;">Doğum Tarihi</h4>
+          <p style="color:white;">{{dogum_tarihi}}</p>
+        </div>
+      </div>
+      <div class="col-md-4" class="animCard">
+        <div class="card card-2">
+          <h4 style="color:white;">Geliş Tarihi</h4>
+          <p style="color:white;">{{gelis_tarihi}}</p>
+        </div>
+      </div>
+      <div class="col-md-4" class="animCard">
+        <div class="card card-2">
+          <h4 style="color:white;">Irk Adı</h4>
+          <p style="color:white;">{{irk_adi}}</p>
+        </div>
+      </div>
+      <div class="col-md-4" class="animCard">
+        <div class="card card-2">
+          <h4 style="color:white;">Cinsiyet</h4>
+          <p style="color:white;">{{cinsiyet}}</p>
+        </div>
+      </div>
+      <div class="col-md-4" class="animCard">
+        <div class="card card-2">
+          <h4 style="color:white;">Not</h4>
+          <p style="color:white;">{{not_icerik}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="padding-left:5%; padding-right:10px; margin-top: 40px; margin-bottom: 40px;" *ngIf="kontrolCard">
+    <ion-button shape="round" fill="outline" expand="full" (click)="isletmedenCikar()"> <ion-icon slot="start" name="exit"></ion-icon>İşletmeden Çıkar</ion-button>
+  </div>
+</ion-content>

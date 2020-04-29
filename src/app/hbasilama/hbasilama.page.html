@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Aşılamalar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container" class="animCard" *ngFor="let user of dataVar">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card card-1">
+          <p style="color:white; font-size: medium;">{{user.HAYVAN_ADI}}</p>
+          <p style="color:white; font-size: medium;">{{user.KUPE_NUMARASI}}</p>
+          <p style="color:white; font-size: medium;">{{user.ANNE_KUPE_NUMARASI}}</p>
+          <p style="color:white; font-size: medium;">{{user.ASI_ADI}}</p>
+          <p style="color:white; font-size: medium;">{{user.ASI_TARIHI}}</p>
+          <p style="color:white; font-size: medium;">{{user.ASI_YAPAN}}</p>
+          <p style="color:white; font-size: medium;">{{user.NOT_ICERIK}}</p>
+        <div style="padding-left:5%; padding-right:10px; margin-top: 40px; margin-bottom: 40px;">
+        <ion-button shape="round" fill="outline" color="secondary" expand="full" (click)="asilamaSil(user.ID)"> <ion-icon slot="start" name="trash"></ion-icon>Sil</ion-button>
+        </div>
+        <div style="padding-left:5%; padding-right:10px; margin-top: 40px; margin-bottom: 40px;">
+          <ion-button shape="round" fill="outline" color="secondary" expand="full" (click)="bilgiDuzenle(user.ID)"> <ion-icon slot="start" name="settings"></ion-icon>Bilgileri Düzenle</ion-button>
+          </div>
+       </div>
+        </div>
+    </div>
+  </div>
+</ion-content>

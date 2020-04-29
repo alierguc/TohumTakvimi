@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      İşletme Bilgileri
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container" class="animCard">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card card-1">
+          <h5 style="color:white;">İşletme Numarası</h5>
+          <p style="color:white;">{{isletme_no}}</p>
+        </div>
+      </div>
+      <div class="col-md-4" class="animCard">
+        <div class="card card-3">
+          <h5 style="color:white;">İşletme Sahibi Adı Soyadı</h5>
+          <p style="color:white;">{{sahip_adi}}<span>&nbsp;{{sahip_soyadi}}</span>&nbsp;</p>
+        </div>
+      </div>
+      <div class="col-md-4" class="animCard">
+        <div class="card card-3">
+          <h5 style="color:white;">Mevcut Hayvan Sayısı</h5>
+          <p style="color:white;">{{toplam_hayvan_adet}}</p>
+        </div>
+      </div>
+      <div class="col-md-4" class="animCard">
+        <div class="card card-3">
+          <h5 style="color:white;">Erkek Hayvan sayısı</h5>
+          <p style="color:white;">{{erkek_hayvan_adet}}</p>
+        </div>
+      </div>
+      <div class="col-md-4" class="animCard">
+        <div class="card card-3">
+          <h5 style="color:white;">Dişi Hayvan sayısı</h5>
+          <p style="color:white;">{{disi_hayvan_adet}}</p>
+        </div>
+      </div>
+      <div class="col-md-4" class="animCard">
+        <div class="card card-3">
+          <h5 style="color:white;">Buzağı Sayısı</h5>
+          <p style="color:white;">{{buzagi_adet}}</p>
+        </div>
+      </div>
+      <div class="col-md-4" class="animCard">
+        <div class="card card-2">
+          <h5 style="color:white;">Tohumlama Sayısı</h5>
+          <p style="color:white;">{{tohumlama_adet}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

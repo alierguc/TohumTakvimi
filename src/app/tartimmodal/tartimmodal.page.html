@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      Tartım Ekle
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="content">
+    <ion-item>
+      <ion-label position="floating">Ağırlık</ion-label>
+      <ion-input name="kg" [(ngModel)]="bodyData.kg"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Tartım Tarihi</ion-label>
+        <ion-datetime name="tartim_tarihi" [(ngModel)]="bodyData.tartim_tarihi" cancelText="Kapat" doneText="Ayarla" value="2019-04-15" min="2019-02" max="2030"
+        monthNames="Ocak, Şubat, Mart, Nisan, Mayıs, Ağustos, Eylül, Ekim, Kasım, Aralık"
+          displayFormat="D MMM YYYY"
+          monthShortNames="Ock, Şbt, Mrt, Nsn, Mys, Hzrn, Tmmz, Agts, Eyl, Ekm, Ksm, Arlk"   
+          ></ion-datetime>
+        </ion-item>
+        <ion-item>
+              <ion-label position="floating">Notunuz</ion-label>
+              <ion-textarea name="not" [(ngModel)]="bodyData.not" rows="6" cols="20"></ion-textarea>
+            </ion-item>        
+            <div style="margin-top: 20px; margin-bottom: 10px;">
+              <ion-button shape="round" fill="outline" expand="full" (click)="tartimEkle()"> <ion-icon slot="start" name="save"></ion-icon>Kaydet</ion-button>
+            </div>
+        </div>
+</ion-content>

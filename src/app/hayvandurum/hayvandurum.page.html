@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      Hayvan Bakımı
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list class="animCard">
+    <ion-item>
+      <ion-label>Kızgınlık</ion-label>
+      <ion-button shape="round" slot="end" fill="outline" (click)="itemKizginlik();$event.stopPropagation();"><ion-icon slot="start" name="search"></ion-icon>Gözat</ion-button>
+      <ion-button shape="round" slot="end" fill="outline" (click)="kizginlikGit();$event.stopPropagation();"><ion-icon slot="start" name="add"></ion-icon>Ekle</ion-button>
+    </ion-item>
+    <ion-item class="animCard">
+      <ion-label>Tohumlama</ion-label>
+      <ion-button shape="round" slot="end" fill="outline" (click)="itemTohumlama();$event.stopPropagation();"><ion-icon slot="start" name="search"></ion-icon>Gözat</ion-button>
+      <ion-button shape="round" slot="end" fill="outline" (click)="tohumlamaGit();$event.stopPropagation();"><ion-icon slot="start" name="add"></ion-icon>Ekle</ion-button>
+    </ion-item>
+    <ion-item class="animCard">
+      <ion-label>Aşılamalar</ion-label>
+      <ion-button shape="round" slot="end" fill="outline" (click)="itemAsilamalar();$event.stopPropagation();"><ion-icon slot="start" name="search"></ion-icon>Gözat</ion-button>
+      <ion-button shape="round" slot="end" fill="outline" (click)="asilamaGit();$event.stopPropagation();"><ion-icon slot="start" name="add"></ion-icon>Ekle</ion-button>
+    </ion-item>
+    <ion-item class="animCard">
+      <ion-label>Hastalıklar</ion-label>
+      <ion-button shape="round" slot="end" fill="outline"  (click)="itemHastalik();$event.stopPropagation();"><ion-icon slot="start" name="search"></ion-icon>Gözat</ion-button>
+      <ion-button shape="round" slot="end" fill="outline" (click)="hastaliklarGit();$event.stopPropagation();"><ion-icon slot="start" name="add"></ion-icon>Ekle</ion-button>
+    </ion-item>
+    <ion-item class="animCard">
+      <ion-label>Tartım</ion-label>
+      <ion-button shape="round" slot="end" fill="outline" (click)="itemTartim();$event.stopPropagation();"><ion-icon slot="start" name="search"></ion-icon>Gözat</ion-button>
+      <ion-button shape="round" slot="end" fill="outline" (click)="tartimGit();$event.stopPropagation();"><ion-icon slot="start" name="add"></ion-icon>Ekle</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

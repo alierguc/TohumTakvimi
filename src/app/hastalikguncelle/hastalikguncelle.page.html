@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      Bilgiyi Düzenle
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="item-contents">
+
+    <ion-item>
+      <ion-label position="floating">Yeni Hastalık Adı</ion-label>
+      <ion-input name="hastalik_adi" [(ngModel)]="bodyData.hastalik_adi"></ion-input>
+    </ion-item>
+
+    <ion-item style="margin-top: 20px;">
+      <ion-label>Doğum Tarihi</ion-label>
+      <ion-datetime name="hastalik_tarihi" [(ngModel)]="bodyData.hastalik_tarihi" cancelText="Kapat" doneText="Ayarla"
+        value="1995-04-15" min="2019-02" max="2030"
+        monthNames="Ocak, Şubat, Mart, Nisan, Mayıs, Ağustos, Eylül, Ekim, Kasım, Aralık" displayFormat="D MMM YYYY"
+        monthShortNames="Ock, Şbt, Mrt, Nsn, Mys, Hzrn, Tmmz, Agts, Eyl, Ekm, Ksm, Arlk"></ion-datetime>
+    </ion-item>
+    <ion-item style="margin-top: 20px;">
+      <ion-label position="floating">Tedavi</ion-label>
+      <ion-input name="tedavi" [(ngModel)]="bodyData.tedavi"></ion-input>
+    </ion-item>
+
+    <ion-item style="margin-top: 20px;">
+      <ion-label position="floating">Tedaviyi Yapan</ion-label>
+      <ion-input name="tedavi_yapan" [(ngModel)]="bodyData.tedavi_yapan"></ion-input>
+    </ion-item>
+
+    <ion-item style="margin-top: 20px;">
+      <ion-label position="stacked">Not</ion-label>
+      <ion-textarea name="not" [(ngModel)]="bodyData.not" rows="6" maxLength="500">
+      </ion-textarea>
+    </ion-item>
+    <div style="margin-top: 20px;">
+      <ion-button shape="round" fill="outline" expand="full" (click)="hastalikGuncelleme()">
+        <ion-icon slot="start" name="save"></ion-icon>Kaydet
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

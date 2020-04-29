@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      En son kayıt
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="lolo" *ngIf="!kontrol">
+  <ion-progress-bar type="indeterminate" reversed="true"></ion-progress-bar>
+  <p>Yükleniyor lütfen bekleyiniz</p>
+</div>
+  <div *ngIf="kontrol" class="animCard">
+  <div class="container" class="animCard">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card card-1">
+          <h4 style="color:white;">Buzağı</h4>
+          <p style="color:white;">{{buzagi}}</p>
+        </div>
+      </div>
+      <div class="col-md-4" class="animCard">
+        <div class="card card-1">
+          <h4 style="color:white;">Küpe Numarası</h4>
+          <p style="color:white;">{{kupe_numarasi}}</p>
+        </div>
+      </div>
+      <div class="col-md-4" class="animCard">
+        <div class="card card-1">
+          <h4 style="color:white;">Hayvan Adı</h4>
+          <p style="color:white;">{{hayvan_adi}}</p>
+        </div>
+      </div>
+      <div class="col-md-4" class="animCard">
+        <div class="card card-1">
+          <h4 style="color:white;">Boğa Küpe Numarası</h4>
+          <p style="color:white;">{{boga_kupe}}</p>
+        </div>
+      </div>
+      <div class="col-md-4" class="animCard">
+        <div class="card card-1">
+          <h4 style="color:white;">Anne Küpe Numarası</h4>
+          <p style="color:white;">{{anne_kupe}}</p>
+        </div>
+      </div>
+      <div class="col-md-4" class="animCard">
+        <div class="card card-3">
+          <h4 style="color:white;">Doğum Tarihi</h4>
+          <p style="color:white;">{{dogum_tarihi}}</p>
+        </div>
+      </div>
+      <div class="col-md-4" class="animCard">
+        <div class="card card-1">
+          <h4 style="color:white;">Cinsiyet</h4>
+          <p style="color:white;">{{cinsiyet}}</p>
+        </div>
+      </div>
+      <div class="col-md-4" class="animCard">
+        <div class="card card-1">
+          <h4 style="color:white;">Irk Adı</h4>
+          <p style="color:white;">{{irk_adi}}</p>
+        </div>
+      </div>
+      <div class="col-md-4" class="animCard">
+        <div class="card card-2">
+          <h4 style="color:white;">Geliş Tarihi</h4>
+          <p style="color:white;">{{gelis_tarihi}}</p>
+        </div>
+      </div>
+      <div class="col-md-4" class="animCard">
+        <div class="card card-2">
+          <h4 style="color:white;">Not</h4>
+          <p style="color:white;">{{not_icerik}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</ion-content>

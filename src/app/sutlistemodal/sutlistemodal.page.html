@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Eklenen süt listesi</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-item>
+    <ion-label>Tarihe göre süt ara</ion-label>
+    <ion-datetime name="tarih" [(ngModel)]="bodyData.tarih" cancelText="Kapat" doneText="Ayarla" value="1995-04-15" min="2019-02" max="2030"
+    monthNames="Ocak, Şubat, Mart, Nisan, Mayıs, Ağustos, Eylül, Ekim, Kasım, Aralık"
+      displayFormat="D MMM YYYY"
+      monthShortNames="Ock, Şbt, Mrt, Nsn, Mys, Hzrn, Tmmz, Agts, Eyl, Ekm, Ksm, Arlk"   
+      ></ion-datetime>
+    </ion-item>
+    <div style="margin-top: 20px; padding-right: 20px; padding-left: 20px;" class="animCard">
+      <ion-button shape="round" fill="outline" expand="full" (click)="sutAra()"> <ion-icon slot="start" name="search"></ion-icon>Ara</ion-button>
+      </div>
+  <div class="container" class="animCard" *ngFor="let user of sutKontrol">
+    <div class="row" class="animCard">
+      <div class="col-md-4">
+        <div class="card card-1"  >
+         
+          <p style="color:white;">Satış Tarihi : <span>&nbsp;{{user.SATIS_TARIHI}}</span></p>
+          <p style="color:white;">Verilen Litre : <span>&nbsp;{{user.VERILEN_LITRE}}</span></p>
+          <p style="color:white;">Litre fiyatı : <span>&nbsp;{{user.LITRE_FIYATI}}&nbsp;₺</span></p>
+          <p style="color:white;">Not : <span>&nbsp;{{user.NOT_ICERIK}}</span></p>
+        </div>
+      </div>
+     
+    </div>
+  </div>
+ 
+</ion-content>

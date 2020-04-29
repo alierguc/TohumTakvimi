@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Tohumlama Listesi</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container" class="animCard" *ngFor="let user of dataVar">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card card-1" [ngStyle]="{ 'background-color': user.KART_RENK }">
+          <div>
+            <p [ngStyle]="{ 'color': user.YAZI_RENK }">Boğa Küpe Numarası :<span>&nbsp;{{user.BOGA_KUPE}}</span></p>
+            <p [ngStyle]="{  'color': user.YAZI_RENK }">Boğa Adı :<span>&nbsp;{{user.BOGA_ADI}}</span></p>
+            <p [ngStyle]="{  'color': user.YAZI_RENK }">Hayvan Adı :<span>&nbsp;{{user.HAYVAN_ADI}}</span></p>
+            <p [ngStyle]="{  'color': user.YAZI_RENK }">Hayvan Küpe Numarası :<span>&nbsp;{{user.KUPE_NUMARASI}}</span>
+            </p>
+            <p [ngStyle]="{  'color': user.YAZI_RENK }">Anne Küpe Numarası :<span>&nbsp;{{user.ANNE_KUPE}}</span></p>
+            <p [ngStyle]="{  'color': user.YAZI_RENK }">Tohumlama Tarihi :<span>&nbsp;{{user.TOHUMLAMA_TARIHI}}</span>
+            </p>
+            <p [ngStyle]="{  'color': user.YAZI_RENK }">Tahmini Yavrulama Tarihi
+              :<span>&nbsp;{{user.TAHMINI_YAVRULAMA_TARIHI}}</span></p>
+            <p [ngStyle]="{  'color': user.YAZI_RENK }">Tahmini Yavrulama Kalan Gün Sayısı
+              :<span>&nbsp;{{user.TAHMINI_YAVRULAMA_KALAN_GUN}}</span></p>
+            <p [ngStyle]="{  'color': user.YAZI_RENK }">Tohumlama Yapan :<span>&nbsp;{{user.TOHUMLAMA_YAPAN}}</span></p>
+            <p [ngStyle]="{  'color': user.YAZI_RENK }">NOT :<span>&nbsp;{{user.NOT_ICERIK}}</span></p>
+            <div style="padding-left:5%; padding-right:10px; margin-top: 40px; margin-bottom: 40px;">
+              <ion-button (click)="tohumlamaSil(user.ID)" shape="round" color="base" expand="full">
+                <ion-icon slot="start" name="trash"></ion-icon>Sil
+              </ion-button>
+            </div>
+            <div style="padding-left:5%; padding-right:10px; margin-top: 40px; margin-bottom: 40px;">
+              <ion-button shape="round" color="base" expand="full"
+              (click)="bilgiDuzenle(user.ID)">
+                <ion-icon slot="start" name="trash"></ion-icon>Bilgileri Düzenle
+              </ion-button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

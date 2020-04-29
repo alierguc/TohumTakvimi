@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+     Hayvanlar
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container" class="animCard">
+    <div class="row">
+      <div class="col-md-4" (click)="erkekYonlendir(param)">
+        <div class="card card-1">
+          <h1 style="color:white;">Erkek</h1>   
+        </div>
+      </div>
+      <div class="col-md-4" class="animCard" (click)="disiYonlendir(param)">
+        <div class="card card-1">
+          <h1 style="color:white;">Dişi</h1>        
+        </div>
+      </div>
+      <div class="col-md-4" class="animCard" (click)="buzagiGit()">
+        <div class="card card-1">
+          <h1 style="color:white;">Buzağılar</h1>        
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

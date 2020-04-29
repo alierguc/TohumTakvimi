@@ -1,0 +1,134 @@
+body{
+  font-family: 'Nunito', sans-serif;
+  padding: 50px;
+}
+.card{
+    border-radius: 4px;
+    background: #056342;
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+      transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+  padding: 14px 80px 18px 36px;
+  cursor: pointer;
+}
+
+.card:hover{
+     transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+.card h3{
+  font-weight: 600;
+}
+
+.card img{
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  max-height: 120px;
+}
+
+.title-container
+{
+  align-content: center;
+  width: 100%;
+  height: 30px;
+}
+.card-1{
+  background-image: url("src/graphics/cow.png");
+      background-repeat: no-repeat;
+    background-position: right;
+    background-size: 80px;
+}
+.card-title{
+  background-image: url("src/graphics/save.png");
+      background-repeat: no-repeat;
+    background-position: right;
+    background-size: 80px;
+}
+p{
+  color: #1E5646;
+}
+.card-2{
+   background-image: url("src/graphics/paper.png");
+      background-repeat: no-repeat;
+    background-position: right;
+    background-size: 80px;
+}
+
+.card-3{
+   background-image: url("src/graphics/time.png");
+      background-repeat: no-repeat;
+    background-position: right;
+    background-size: 80px;
+}
+.lolo
+{
+  
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 200px;
+  height: 100px;
+
+}
+@keyframes fadeInUp {
+  from { 
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInUp {
+  from { 
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+.animCard {
+  // first we make all instances of this transparent. 
+  opacity: 0; 
+  // as we're using the same animation for each instance, call it here so we're not repeating it
+  animation: fadeInUp 1s ease-in-out 0s forwards;
+
+  // then define the animation delay in each class
+  &.first {
+    animation-delay: 1s;
+  }
+  &.second {
+    animation-delay: 3s;
+  }
+  &.third {
+    animation-delay: 5s;
+  }
+  &.fourth {
+    animation-delay: 7s;
+  }
+  &.fifth {
+    animation-delay: 9s;
+  }
+  &.sixth {
+    animation-delay: 11s;
+  }
+ }
+
+@media(max-width: 990px){
+  .card{
+    margin: 20px;
+  }
+} 

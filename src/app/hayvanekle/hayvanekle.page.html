@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Hayvan Ekle
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="item-contents">
+
+    <ion-item>
+      <ion-label position="floating">Küpe numarasını giriniz</ion-label>
+      <ion-input name="kupe_numarasi" [(ngModel)]="bodyData.kupe_numarasi"></ion-input>
+    </ion-item>
+    <ion-item style="margin-top: 20px;">
+      <ion-label position="floating">Hayvan Adı</ion-label>
+      <ion-input name="hayvan_adi" [(ngModel)]="bodyData.hayvan_adi"></ion-input>
+    </ion-item>
+    <ion-item style="margin-top: 20px;">
+      <ion-label>Doğum Tarihi</ion-label>
+      <ion-datetime name="dogum_tarihi" [(ngModel)]="bodyData.dogum_tarihi" cancelText="Kapat" doneText="Ayarla"
+        value="1995-04-15" min="2019-02" max="2030"
+        monthNames="Ocak, Şubat, Mart, Nisan, Mayıs, Ağustos, Eylül, Ekim, Kasım, Aralık" displayFormat="D MMM YYYY"
+        monthShortNames="Ock, Şbt, Mrt, Nsn, Mys, Hzrn, Tmmz, Agts, Eyl, Ekm, Ksm, Arlk"></ion-datetime>
+    </ion-item>
+    <ion-item style="margin-top: 20px;">
+      <ion-label>Geliş Tarihi</ion-label>
+      <ion-datetime name="gelis_tarihi" [(ngModel)]="bodyData.gelis_tarihi" cancelText="Kapat" doneText="Ayarla"
+        value="1995-04-15" min="2019-02" max="2030"
+        monthNames="Ocak, Şubat, Mart, Nisan, Mayıs, Ağustos, Eylül, Ekim, Kasım, Aralık" displayFormat="D MMM YYYY"
+        monthShortNames="Ock, Şbt, Mrt, Nsn, Mys, Hzrn, Tmmz, Agts, Eyl, Ekm, Ksm, Arlk"></ion-datetime>
+    </ion-item>
+    <ion-item style="margin-top: 20px;">
+      <ion-label position="floating">Boğa Küpe numarası</ion-label>
+      <ion-input name="boga_kupe" [(ngModel)]="bodyData.boga_kupe"></ion-input>
+    </ion-item>
+
+    <ion-item style="margin-top: 20px;">
+      <ion-label position="floating">Anne Küpe numarası</ion-label>
+      <ion-input name="anne_kupe" [(ngModel)]="bodyData.anne_kupe"></ion-input>
+    </ion-item>
+
+    <ion-item style="margin-top: 20px;">
+      <ion-label>Buzağı</ion-label>
+      <ion-select name="cinsiyet" (ionChange)="cinsiyetKontrolFunc()" [(ngModel)]="bodyData.buzagi" placeholder="Buzağı"
+        okText="Seç" cancelText="İptal">
+        <ion-select-option value="0">Evet</ion-select-option>
+        <ion-select-option value="1">Hayır</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item style="margin-top: 20px;">
+      <ion-label>Hayvanın Cinsiyeti</ion-label>
+      <ion-select name="cinsiyet" (ionChange)="cinsiyetKontrolFunc()" [(ngModel)]="bodyData.cinsiyet"
+        placeholder="Cinsiyet" okText="Seç" cancelText="İptal">
+        <ion-select-option value="0">Dişi</ion-select-option>
+        <ion-select-option value="1">Erkek</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item style="margin-top: 20px;">
+      <ion-label>Hayvanın Irkı</ion-label>
+      <ion-select name="irk_adi" [(ngModel)]="bodyData.irk_adi" placeholder="Irk" okText="Seç" cancelText="Kapat">
+        <ion-select-option *ngFor="let irk of eskiDeger">{{irk.IRK_ADI}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item style="margin-top: 20px;">
+      <ion-label position="floating">Irk Ekle</ion-label>
+      <ion-input name="irk_adi_ekle" [(ngModel)]="irkDatas.irk_adi_ekle"></ion-input>
+    </ion-item>
+
+    <ion-button shape="round" fill="outline" expand="full" (click)="irkEkle()">
+      <ion-icon slot="end" name="add"></ion-icon>Irk Ekle
+
+    </ion-button>
+
+    <ion-item style="margin-top: 20px;">
+      <ion-label position="stacked">Not</ion-label>
+      <ion-textarea name="not" [(ngModel)]="bodyData.not" rows="6" maxLength="500">
+      </ion-textarea>
+    </ion-item>
+    <div style="margin-top: 20px;">
+      <ion-button shape="round" fill="outline" expand="full" (click)="requestAdd()">
+        <ion-icon slot="start" name="save"></ion-icon>Kaydet
+      </ion-button>
+    </div>
+  </div>
+
+</ion-content>

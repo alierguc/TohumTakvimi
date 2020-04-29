@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Günlük Süt
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+ 
+  <div class="container" class="animCard">
+    <ion-toolbar>
+      <ion-title color="primary">Genel Bilgi</ion-title>
+    </ion-toolbar>
+    <div class="row" class="animCard">
+      <div class="col-md-4">
+        <div class="card card-1">    
+          <p style="color:white;">Toplam Litre : <span>&nbsp;{{toplam_litre}}&nbsp;Litre</span></p>
+          <p style="color:white;">Toplam Fiyat : <span>&nbsp;{{toplam_fiyat}}&nbsp;₺</span></p>
+
+        </div>
+      </div>
+    </div>
+      <ion-toolbar>
+        <ion-title color="primary">Süt Listesi</ion-title>
+      </ion-toolbar>
+      <div class="col-md-4" class="animCard" *ngFor="let user of secondData">
+        <div class="card card-1"  >
+          <p style="color:white;">Satış Tarihi : <span>&nbsp;{{user.SATIS_TARIHI}}</span></p>
+          <p style="color:white;">Verilen Litre : <span>&nbsp;{{user.VERILEN_LITRE}}</span></p>
+          <p style="color:white;">Litre fiyatı  : <span>&nbsp;{{user.LITRE_FIYATI}}&nbsp;₺</span></p>
+          <p style="color:white;">Not : <span>&nbsp;{{user.NOT_ICERIK}}</span></p>
+          <div style="margin-top: 20px; padding-right: 20px; padding-left: 20px;" class="animCard">
+            <ion-button shape="round" color="secondary" fill="outline" expand="full" (click)="sutSil(user.ID)"> <ion-icon slot="start" name="trash"></ion-icon>Sil</ion-button>
+          </div>
+        </div>
+      </div>
+      </div>
+ 
+  <div style="margin-top: 20px; padding-right: 20px; padding-left: 20px;" class="animCard">
+    <ion-button shape="round" fill="outline" expand="full" (click)="sutEkle()"> <ion-icon slot="start" name="add"></ion-icon>Günlük süt ekle</ion-button>
+  </div>
+    <div style="margin-top: 20px; padding-right: 20px; padding-left: 20px; margin-bottom: 30px;" class="animCard">
+    <ion-button shape="round" fill="outline" expand="full" (click)="sutListe()"> <ion-icon slot="start" name="search"></ion-icon>Listeye Gözat</ion-button>
+</div>
+ 
+
+</ion-content>

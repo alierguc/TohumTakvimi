@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      İşletmede Olmayanlar
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="lolo" *ngIf="veriKontrol">
+    <p>Herhangi bir kayıt bulunmamaktadır.</p>
+  </div>
+  <div class="container" class="animCard">
+    <div class="row">
+      <div class="col-md-4" *ngFor="let dataUser of data">
+        <div class="card card-1">
+          <h5 style="color:white; text-align: center;">İşletmede olmayan hayvan</h5>
+         
+          <p style="color:white;">Çıkış Tarihi : <span>&nbsp;{{dataUser.CIKIS_TARIHI}}</span>&nbsp;</p>
+          <p style="color:white;">Çıkış Nedeni : <span>&nbsp;{{dataUser.CIKIS_NEDENI}}</span>&nbsp;</p>
+          <p style="color:white;">Hayvan Adı : <span>&nbsp;{{dataUser.HAYVAN_ADI}}</span>&nbsp;</p>
+          <p style="color:white;">Küpe Numarası : <span>&nbsp;{{dataUser.KUPE_NUMARASI}}</span>&nbsp;</p>
+          <p style="color:white;">Anne Küpe : <span>&nbsp;{{dataUser.ANNE_KUPE}}</span>&nbsp;</p>
+          <p style="color:white;">Doğum Tarihi : <span>&nbsp;{{dataUser.DOGUM_TARIHI}}</span>&nbsp;</p>
+          <p style="color:white;">Geliş Tarihi : <span>&nbsp;{{dataUser.GELIS_TARIHI}}</span>&nbsp;</p>
+          <p style="color:white;">Cinsiyet : <span>&nbsp;{{dataUser.CINSIYET}}</span>&nbsp;</p>
+
+          <div style="margin-top: 20px; margin-bottom: 10px;">
+            <ion-button shape="round" color="secondary" fill="outline" expand="full" (click)="geriAl(dataUser.HAYVAN_ID)"> <ion-icon slot="start" name="arrow-round-back"></ion-icon>Geri Al</ion-button>
+          </div>
+          <div style="margin-top: 20px; margin-bottom: 10px;">
+            <ion-button shape="round" color="secondary" fill="outline" expand="full" (click)="isletmedenSil(dataUser.KUPE_NUMARASI)"> <ion-icon slot="start" name="trash"></ion-icon>İşletmeden Sil</ion-button>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+</ion-content>
