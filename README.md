@@ -20,6 +20,13 @@ H2 İonic ve Cordova Sistem Gereksinimleri
 
 Android Sistem Gereksinimi  | Versiyon 
 ------------- | -------------
+Ionic CLI | 6.1.0
+Ionic Framework | 4.11.8
+Cordova CLI | cordova-lib@9.0.1
+NodeJS | v12.16.0
+npm | 6.13.4
+Cordova Plugins | cordova-plugin-ionic-keyboard 2.2.0, cordova-plugin-ionic-webview 4.1.3, (and 8 other plugins)
+Android SDK Tools | 26.1.1
 Java JDK  | 1.8.0
 Android SDK  | TRUE
 Java JDK  | 1.8.0
@@ -33,6 +40,12 @@ H2 Ionic and Cordova System Requirements
 
 Android System Requirements  | Version 
 ------------- | -------------
+Ionic CLI | 6.1.0
+Ionic Framework | 4.11.8
+Cordova CLI | cordova-lib@9.0.1
+NodeJS | v12.16.0
+npm | 6.13.4
+Cordova Plugins | cordova-plugin-ionic-keyboard 2.2.0, cordova-plugin-ionic-webview 4.1.3, (and 8 other plugins)
 Java JDK  | 1.8.0
 Android SDK  | TRUE
 Java JDK  | 1.8.0
