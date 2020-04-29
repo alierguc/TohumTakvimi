@@ -13,3 +13,12 @@ It is coded according to Ionic 4. To learn Ionic and Cordova requirements;
 `$ ionic cordova requirements`
 
 Enter the command from the file content.
+
+------------------------------------------------------------------------------------------
+
+H2 İonic ve Cordova Sistem Gereksinimleri
+
+First Header  | Second Header
+------------- | -------------
+Content Cell  | Content Cell
+Content Cell  | Content Cell 
